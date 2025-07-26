@@ -14,12 +14,12 @@ router.get('/api/contacts', contactController.getAllContacts);
 router.get('/api/contacts/:id', contactController.getContactById);
 
 // This endpoint creates a new contact in the MongoDB database
-router.post('/api/createContacts', contactController.postContact);
+router.post('/api/createContact', contactController.postContact);
 
 // This endpoint updates an existing contact in the MongoDB database based on the id
-router.put('/api/updateContacts/:id', contactController.putContact);
+router.put('/api/updateContact/:id', contactController.putContact);
 
 // This endpoint deletes a contact from the MongoDB database based on the id
-router.delete('/api/deleteContacts/:id', contactController.deleteContact);
+router.delete('/api/deleteContact/:id', contactController.deleteContact);
 
 module.exports = router;
