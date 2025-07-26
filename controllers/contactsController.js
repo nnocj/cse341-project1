@@ -37,7 +37,7 @@ async function postContact(req, res) {
     const collection = database.collection('contacts');
     const newContact = req.body;
     const result = await collection.insertOne(newContact);
-    res.status(201).json({ message: 'Contact created successfully' });
+    res.status(201).json({ message: 'Contact created successfully', result });
   } catch (error) {
     console.error('Error creating contact:', error);
     res.status(500).json({ error: 'Internal Server Error' });
@@ -57,6 +57,7 @@ async function putContact(req,res) {
    if (result.matchedCount === 0) {// the matchedCount is returned by MongoDB updateOne method
       return res.status(404).json({ error: 'Contact not found' });
     }
+    res.json({ message: 'Contact updated successfully', result });
   } catch (error) {
     console.error('Error updating contact:', error);
     res.status(500).json({error: 'Internal Server Error'});
