@@ -6,30 +6,29 @@ document.addEventListener('DOMContentLoaded', () => {
   fadeElements.forEach((el, index) => {
     setTimeout(() => {
       el.classList.add('show');
-    }, index * 300); // I'M staggering animations by 300ms
+    }, index * 300); // I'm staggering animations by 300ms
   });
 });
 
-
 async function deleteContact(contactId) {
-    const confirmDelete = confirm('Are you sure you want to delete this contact?');
-    if (!confirmDelete) return;
+  const confirmDelete = confirm('Are you sure you want to delete this contact?');
+  if (!confirmDelete) return;
 
-    try {
-        const response = await fetch(`https://cse341-project1-abgw.onrender.com/api/deleteContact/${contactId}`, {
-          method: 'DELETE'
-      });
+  try {
+    const response = await fetch(`https://cse341-project1-abgw.onrender.com/api/deleteContact/${contactId}`, {
+      method: 'DELETE'
+    });
 
     if (response.status === 204) {
-        alert('Contact deleted successfully.');
+      alert('Contact deleted successfully.');
     } else {
-        const data = await response.json();
-        alert(`Failed to delete contact: ${data.error}`);
-      }
-      } catch (error) {
-        alert('Error deleting contact: ' + error.message);
-      }
+      const data = await response.json();
+      alert(`Failed to delete contact: ${data.error}`);
     }
+  } catch (error) {
+    alert('Error deleting contact: ' + error.message);
+  }
+}
 
 async function updateContact(contactId) {
   const updatedData = {
@@ -44,7 +43,7 @@ async function updateContact(contactId) {
       headers: {
         'Content-Type': 'application/json'
       },
-       body: JSON.stringify(updatedData)
+      body: JSON.stringify(updatedData)
     });
 
     const data = await response.json();
@@ -55,6 +54,6 @@ async function updateContact(contactId) {
       alert(`Failed to update contact: ${data.error}`);
     }
   } catch (error) {
-     alert('Error updating contact: ' + error.message);
+    alert('Error updating contact: ' + error.message);
   }
 }
