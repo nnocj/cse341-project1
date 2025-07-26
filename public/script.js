@@ -57,3 +57,32 @@ async function updateContact(contactId) {
     alert('Error updating contact: ' + error.message);
   }
 }
+
+
+async function createContact() {
+  const newContact = {
+    name: "New Contact",
+    email: "new@example.com",
+    phone: "123-456-7890"
+  };
+
+  try {
+    const response = await fetch('https://cse341-project1-abgw.onrender.com/api/createContact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newContact)
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert('Contact created successfully');
+    } else {
+      alert(`Failed to create contact: ${data.error}`);
+    }
+  } catch (error) {
+    alert('Error creating contact: ' + error.message);
+  }
+}
