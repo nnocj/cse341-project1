@@ -1,0 +1,24 @@
+
+[
+    {
+        "firstName": "Agnes",
+        "lastName": "Commey",
+        "email": "agnes@example.com",
+        "favoriteColor": "blue",
+        "birthdate": "1990-01-01"
+    },
+    {
+        "firstName": " Gloria ",
+        "lastName": " Akuffo ",
+        "email": " gloria@example.com ",
+        "favoriteColor": " green ",
+        "birthdate": " 1995-05-05 "
+    },
+    {
+        "firstName": "Evans ",
+        "lastName": "Asare ",
+        "email": "evans@example.com",
+        "favoriteColor": "red",
+        "birthdate": "1992-03-15"
+    }
+]
