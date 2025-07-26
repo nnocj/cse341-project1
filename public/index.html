@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="Nicholas Oblitey Commey">
-    <meta name="Description" content="CSE 341 Project 1. Week 1 and 2 - Contact List API">
-    <title>CSE 341 Project 1 - Contact List API</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="Author" content="Nicholas Oblitey Commey"/>
+  <meta name="Description" content="CSE 341 Project 1. Week 1 and 2 - Contact List API"/>
+  <title>CSE 341 Project 1 - Contact List API</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <header class="fade-in">
-        <h1>CSE 341 Project 1 - Contact List API</h1>
-    </header>
-    <main class="fade-in">
-        <p>Welcome to the CSE 341 Project 1 - Contact List API. This API allows you to manage a list of contacts.</p>
-        <p>Use the endpoints provided to interact with the contact list.</p>
-        <section>
-            <h2>Endpoints</h2>
-            <ul>
-                <li><strong>GET '/api/contacts'</strong> - Retrieve all contacts</li>
-                <a href="https://cse341-project1-abgw.onrender.com/api/contacts" target="_blank">View All Contacts</a>
-                <li><strong>GET '/api/contacts/:id'</strong> - Retrieve one contact based on ID</li>  
-                <a href="https://cse341-project1-abgw.onrender.com/api/contacts/68825c5c27c6b982373449c4" target="_blank">Example</a>       
-                <li><strong>POST '/api/contacts'</strong> - Create a new contact</li>
-                <a href="https://cse341-project1-abgw.onrender.com/api/createContact" target="_blank" method="POST">Create Contact</a>   
-                <li><strong>PUT '/api/contacts/:id'</strong> - Update an existing contact</li>
-                <a href="https://cse341-project1-abgw.onrender.com/api/updateContact/68825c5c27c6b982373449c4" target="_blank" method="PUT">Update Contact</a>    
-                <li><strong>DELETE '/api/contacts/:id'</strong> - Delete a contact</li>
-                <a href="https://cse341-project1-abgw.onrender.com/api/deleteContact/68825c5c27c6b982373449c4" target="_blank" method="DELETE">Delete Contact</a>
-            </ul>
-    </main>
-    <script src="./script.js"></script>
+  <header class="fade-in">
+    <h1>CSE 341 Project 1 - Contact List API</h1>
+  </header>
+
+  <main class="fade-in">
+    <p>Welcome to the CSE 341 Project 1 - Contact List API. This API allows you to manage a list of contacts.</p>
+
+    <section>
+      <h2>Endpoints</h2>
+      <ul>
+        <li><strong>GET all contacts</strong></li>
+        <a href="https://cse341-project1-abgw.onrender.com/api/contacts" target="_blank">View All Contacts</a>
+
+        <li><strong>GET one contact by ID</strong></li>
+        <a href="https://cse341-project1-abgw.onrender.com/api/contacts/68825c5c27c6b982373449c4" target="_blank">View Contact</a>
+
+        <li><strong>POST a new contact</strong></li>
+        <p>To post, use Postman or custom form.</p>
+
+        <li><strong>PUT to update a contact</strong></li>
+        <button onclick="updateContact('68825c5c27c6b982373449c4')">Update Contact</button>
+
+        <li><strong>DELETE a contact</strong></li>
+        <button onclick="deleteContact('68825c5c27c6b982373449c4')">Delete Contact</button>
+      </ul>
+    </section>
+  </main>
+
+    <footer class="fade-in">
+        <p>&copy; 2023 Nicholas Oblitey Commey</p>
+        <p>Contact: <a href="mailto:nicholas@example.com">nicholas@example.com</a></p>
+    </footer>
 </body>
 </html>
