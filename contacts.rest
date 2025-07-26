@@ -1,0 +1,43 @@
+### Get all contacts
+GET https://cse341-project1-abgw.onrender.com/api/contacts
+Content-Type: application/json
+
+###
+
+### Get a single contact by ID (example)
+GET https://cse341-project1-abgw.onrender.com/api/contacts/68825c5c27c6b982373449c4
+Content-Type: application/json
+
+###
+
+### Create a new contact (example)
+POST https://cse341-project1-abgw.onrender.com/api/contacts
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "favoriteColor": "yellow",
+  "birthdate": "1985-10-20"
+}
+
+###
+
+### Update an existing contact by ID (example)
+PUT https://cse341-project1-abgw.onrender.com/api/contacts/68825c5c27c6b982373449c4
+Content-Type: application/json
+
+{
+  "firstName": "Agnes",
+  "lastName": "Commey",
+  "email": "agnes.new@example.com",
+  "favoriteColor": "purple",
+  "birthdate": "1990-01-01"
+}
+
+###
+
+### Delete a contact by ID (example)
+DELETE https://cse341-project1-abgw.onrender.com/api/contacts/68825c5c27c6b982373449c4
+Content-Type: application/json
