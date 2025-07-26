@@ -1,4 +1,4 @@
-import { connectToDB } from "../data/database";
+const { connectToDB } = require('../data/database');
 
 async function getAllContacts(req, res) {
   try {
