@@ -11,7 +11,7 @@ Content-Type: application/json
 ###
 
 ### Create a new contact (example)
-POST https://cse341-project1-abgw.onrender.com/api/contacts
+POST https://cse341-project1-abgw.onrender.com/api/createContact
 Content-Type: application/json
 
 {
@@ -25,7 +25,7 @@ Content-Type: application/json
 ###
 
 ### Update an existing contact by ID (example)
-PUT https://cse341-project1-abgw.onrender.com/api/contacts/68825c5c27c6b982373449c4
+PUT https://cse341-project1-abgw.onrender.com/api/updateContact/68825c5c27c6b982373449c4
 Content-Type: application/json
 
 {
@@ -39,5 +39,5 @@ Content-Type: application/json
 ###
 
 ### Delete a contact by ID (example)
-DELETE https://cse341-project1-abgw.onrender.com/api/contacts/68825c5c27c6b982373449c4
+DELETE https://cse341-project1-abgw.onrender.com/api/deleteContact/68825c5c27c6b982373449c4
 Content-Type: application/json
