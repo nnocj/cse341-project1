@@ -20,5 +20,33 @@
         "email": "evans@example.com",
         "favoriteColor": "red",
         "birthdate": "1992-03-15"
+    },
+    {
+        "firstName": "Kwame",
+        "lastName": "Nkrumah",
+        "email": "kwame@example.com",
+        "favoriteColor": "yellow",
+        "birthdate": "1985-10-21"
+    },
+    {
+        "firstName": "Ama",
+        "lastName": "Serwah",
+        "email": "ama@example.com",
+        "favoriteColor": "purple",
+        "birthdate": "1998-07-30"
+    },
+    {
+        "firstName": "Kojo",
+        "lastName": "Mensah",
+        "email": "kojo@example.com",
+        "favoriteColor": "orange",
+        "birthdate": "1993-11-12"
+    },
+    {
+        "firstName": "Akosua",
+        "lastName": "Boateng",
+        "email": "akosua@example.com",
+        "favoriteColor": "pink",
+        "birthdate": "1996-02-18"
     }
 ]
