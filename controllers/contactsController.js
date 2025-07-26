@@ -1,4 +1,5 @@
 const { connectToDB } = require('../data/database');
+const { ObjectId } = require('mongodb');
 
 async function getAllContacts(req, res) {
   try {
@@ -17,7 +18,7 @@ async function getContactById(req, res) {
   try {
     const database = await connectToDB();
     const collection = database.collection('contacts');
-    const contact = await collection.findOne({ _id: id});
+    const contact = await collection.findOne({ _id: new ObjectId(id) });
 
     if (!contact) {
       return res.status(404).json({ error: 'Contact not found' });
