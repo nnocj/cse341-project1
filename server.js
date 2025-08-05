@@ -1,12 +1,16 @@
+const path = require('path');
 const express = require('express');
+const swaggerUi = require('swagger-ui-express');
+const fs = require('fs');
+const swaggerDocument = JSON.parse(fs.readFileSync('./swagger.json', 'utf8'));
+
 const app = express();
 app.use(express.json());
-const path = require('path');
 
 
+// other middleware like bodyParser, routes, etc.
 //serve static files from the public folder
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
@@ -14,8 +18,9 @@ app.get('/', (req, res) => {
 
 app.use('/', require('./routes'));
 
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-})
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+// Starting the server
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Server is running. Swagger docs at /api-docs');
+});
