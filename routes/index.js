@@ -3,9 +3,9 @@ const path = require('path');
 const contactController = require('../controllers/contactsController');
 
 // Serve static files from the public folder
-router.get('/', (req, res) => {
+/*router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
-});
+});*/
 
 // This endpoint retrieves all contacts from the MongoDB database
 router.get('/api/contacts', contactController.getAllContacts);
