@@ -1,10 +1,8 @@
 /* ****************************************
  * Middleware For Handling Errors
  **************************************** */
-function generalHandleErrors(fn) {
+exports.generalHandleErrors = function (fn) {
   return function (req, res, next) {
     return Promise.resolve(fn(req, res, next)).catch(next)
   }
 }
-
-module.exports = generalHandleErrors;

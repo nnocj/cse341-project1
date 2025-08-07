@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const path = require('path');
 const contactController = require('../controllers/contactsController');
-const contactValidate = require('../utilities/validation');
+const contactValidate = require('../utilities/validation').contactValidate;
 const  errorHandler = require('../middleware/handleErrors');
 
 // Serve static files from the public folder
